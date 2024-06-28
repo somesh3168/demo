@@ -1,0 +1,124 @@
+---
+permalink: /index.html
+layout: default
+---
+
+<section id="banner">
+  <div class="content">
+      <header>
+          <h1>Welcome To
+              Belform<br /></h1>
+          <h2>
+              INSULATION LTD.
+          </h2>
+          <p>BELFORM INSUL-PHEN,BELFORM STYROFOAM INTERLOCKING SYSTEM & TRYMER XP PIPE INSULATION & FITTINGS</p>
+      </header>
+      <p>We manufacture a wide variety of high-quality mechanical insulation products. Available in Resolco Phenolic,
+          Styrofoam, Urethane, and Cellular Glass Foam,
+          Designed specifically for condensation control and for minimizing heat gain (loss).<br>
+          Most of our products are manufactured with tongue and groove and shiplapped edges to increase their
+          insulation value.
+          <br>Resolve Phenolic insulation is available in longitudinal flat edge and butt edge on the ends with an
+          "All Service Jacket (ASJ)" included.
+      </p>
+      <ul class="actions">
+          <li><a href="#" class="button big">Learn More</a></li>
+      </ul>
+  </div>
+  <span class="image object">
+    <img src="assets/images/home_image_belform.png" alt="">
+  </span>
+</section>
+
+
+<section>
+  <header class="major">
+    <h2>Belform Insulation Products</h2>
+    <!-- Marquee Component -->
+    <div class="marquee" id="marquee">
+      <div class="marquee-content">
+        {% for product in site.data.products %}
+        <div class="thumbnail-wrapper">
+          <a href="{{ product.link }}" target="_blank">
+            <img src="{{ product.image_url }}" alt="{{ product.title_1 }}">
+            <div class="caption">{{ product.title_1 }}</div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+  <ul class="actions">
+          <li><a href="#" class="button big">Learn More</a></li>
+      </ul>
+</section>
+
+<section>
+  <header class="major">
+      <h2>Belform Insulation Projects</h2>
+      <!-- Marquee Component -->
+      <div class="marquee" id="marquee">
+          <div class="marquee-content">
+              {% for project in projects %}
+              <div class="thumbnail-wrapper">
+                  <a href="#" target="_blank">
+                      <img src="#" alt="{{ project.title_1 }}">
+                      <div class="caption" style="text-overflow:ellipsis;">{{ project.title_1 }}</div>
+                  </a>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+  </header>
+  <ul class="actions">
+      <li><a href="#" class="button big">Learn More</a></li>
+  </ul>
+</section>
+<script>
+  let slideIndex = [1,1];
+  let slideId = ["slide_f1", "slide_f2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+
+  function showSlides(n, no) {
+    let i;
+    let x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex[no]-1].style.display = "block";
+  }
+  // JavaScript to handle interactive scrolling
+  const marquee = document.getElementById('marquee');
+  let isScrolling = false;
+  let startX;
+  let scrollLeft;
+
+  marquee.addEventListener('mousedown', (e) => {
+      isScrolling = true;
+      startX = e.pageX - marquee.offsetLeft;
+      scrollLeft = marquee.scrollLeft;
+  });
+
+  marquee.addEventListener('mouseleave', () => {
+      isScrolling = false;
+  });
+
+  marquee.addEventListener('mouseup', () => {
+      isScrolling = false;
+  });
+
+  marquee.addEventListener('mousemove', (e) => {
+      if (!isScrolling) return;
+      e.preventDefault();
+      const x = e.pageX - marquee.offsetLeft;
+      const walk = (x - startX) * 2; // Adjust scroll speed as needed
+      marquee.scrollLeft = scrollLeft - walk;
+  });
+</script>

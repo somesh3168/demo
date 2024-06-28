@@ -3718,6 +3718,9 @@ img {
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
 }
 
 /* .marquee-content img {
