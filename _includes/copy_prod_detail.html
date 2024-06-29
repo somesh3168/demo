@@ -1,0 +1,180 @@
+<style>
+#post.container {
+    margin: 7rem auto;
+    word-break: break-word;
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+#post #title {
+    text-decoration: none;
+
+}
+.title {
+    margin: auto 0.75rem !important;
+    color: #363636;
+    line-height: 1.125;
+    text-align: center;
+}
+.title.is-2 {
+    font-size: 2.5rem;
+}
+.has-background-black {
+    background-color: #0a0a0a !important;
+}
+.has-text-black {
+    color: #0a0a0a !important;
+}
+hr {
+    margin: 1rem auto;
+    height: 1px;
+    border: none;
+    display: block;
+
+}
+.columns:not(:last-child) {
+    margin-bottom: calc(1.5rem - .75rem);
+}
+.columns.is-variable.is-5 {
+    --columnGap: 1.25rem;
+}
+.columns.is-variable {
+    --columnGap: 0.75rem;
+    margin-left: calc(-1* var(--columnGap));
+    margin-right: calc(-1* var(--columnGap));
+}
+.columns.is-variable .column {
+    padding-left: var(--columnGap);
+    padding-right: var(--columnGap);
+}
+.image.is-16by9 {
+    padding-top: 56.25%;
+}
+.image {
+    display: block;
+    position: relative;
+}
+#post #post-image {
+    border-radius: 0.25rem;
+}
+.image.is-16by9 .has-ratio, .image.is-16by9 img, .image.is-1by1 .has-ratio, .image.is-1by1 img, .image.is-1by2 .has-ratio, .image.is-1by2 img, .image.is-1by3 .has-ratio, .image.is-1by3 img, .image.is-2by1 .has-ratio, .image.is-2by1 img, .image.is-2by3 .has-ratio, .image.is-2by3 img, .image.is-3by1 .has-ratio, .image.is-3by1 img, .image.is-3by2 .has-ratio, .image.is-3by2 img, .image.is-3by4 .has-ratio, .image.is-3by4 img, .image.is-3by5 .has-ratio, .image.is-3by5 img, .image.is-4by3 .has-ratio, .image.is-4by3 img, .image.is-4by5 .has-ratio, .image.is-4by5 img, .image.is-5by3 .has-ratio, .image.is-5by3 img, .image.is-5by4 .has-ratio, .image.is-5by4 img, .image.is-9by16 .has-ratio, .image.is-9by16 img, .image.is-square .has-ratio, .image.is-square img {
+    height: 100%;
+    width: 100%;
+}
+.hero-video, .image.is-16by9 .has-ratio, .image.is-16by9 img, .image.is-1by1 .has-ratio, .image.is-1by1 img, .image.is-1by2 .has-ratio, .image.is-1by2 img, .image.is-1by3 .has-ratio, .image.is-1by3 img, .image.is-2by1 .has-ratio, .image.is-2by1 img, .image.is-2by3 .has-ratio, .image.is-2by3 img, .image.is-3by1 .has-ratio, .image.is-3by1 img, .image.is-3by2 .has-ratio, .image.is-3by2 img, .image.is-3by4 .has-ratio, .image.is-3by4 img, .image.is-3by5 .has-ratio, .image.is-3by5 img, .image.is-4by3 .has-ratio, .image.is-4by3 img, .image.is-4by5 .has-ratio, .image.is-4by5 img, .image.is-5by3 .has-ratio, .image.is-5by3 img, .image.is-5by4 .has-ratio, .image.is-5by4 img, .image.is-9by16 .has-ratio, .image.is-9by16 img, .image.is-square .has-ratio, .image.is-square img, .is-overlay, .modal, .modal-background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#post .subtitle {
+    letter-spacing: 0.05rem;
+}
+.columns.is-variable .column {
+    padding-left: var(--columnGap);
+    padding-right: var(--columnGap);
+}
+.subtitle.is-5 {
+    font-size: 1.25rem;
+}
+.subtitle {
+    letter-spacing: 0.25rem;
+}
+
+.block:not(:last-child), .box:not(:last-child), .breadcrumb:not(:last-child), .content:not(:last-child), .highlight:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .notification:not(:last-child), .pagination:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .tabs:not(:last-child), .title:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .has-text-justified-desktop {
+        text-align: justify !important;
+    }
+}
+@media screen and (min-width: 769px), print {
+    .has-text-justified-tablet {
+        text-align: justify !important;
+    }
+}
+.has-text-justified {
+    text-align: justify !important;
+}
+
+@media screen and (min-width: 769px), print {
+    .column.is-5, .column.is-5-tablet {
+        flex: none;
+        width: 41.66667%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media screen and (min-width: 769px), print {
+    .columns:not(.is-desktop) {
+        display: flex;
+    }
+}
+@media screen and (min-width: 769px), print {
+    .column.is-6, .column.is-6-tablet {
+        flex: none;
+        width: 50%;
+    }
+}
+
+</style>
+
+<div class="container" id="post">
+    <a href="#" class="has-text-black" id="title">
+        <h1 class="title has-text-centered is-2 has-text-weight-semibold ">Sample Belform</h1>
+    </a>
+    <hr class="has-background-black">
+    <div class="columns is-variable is-5">
+        <div class="column is-6">
+            <figure class="image is-16by9 has-shadow"> <img
+                    src="/assets/images/products/product1.jpg"
+                    alt="" id="post-image"></figure>
+        </div>
+        <div
+            class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
+            <p id="description" class="content is-small has-text-weight-medium is-uppercase">A sample post to show how
+                the content will look and how will different headlines, quotes and codes will be represented.</p>
+            <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">Published on <b>April 24,
+                    2020</b> by <a href="https://github.com/belform" target="_blank"><b class="has-text-link"><u>Belform
+                            Insulation Canada</u></b> </a></p>
+            <p class="subtitle is-uppercase">
+                <i class="fas fa-tags"></i> Font Awesome fontawesome.com
+                <span class="tag is-link">sample</span> <span class="tag is-link">post</span> <span
+                    class="tag is-link">test</span>
+            </p>
+            <p class="subtitle is-uppercase">
+                <i class="fas fa-clock"></i> Font Awesome fontawesome.com
+                <b class="has-text-link"> 3 min
+                </b>READ
+            </p>
+        </div>
+    </div>
+    <div
+        class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
+        <p></p>
+        <p>This post will show you how the content will look like in the post pages and how the headlines, quotes and
+            quotes will be represented. Belform is mainly used to write simple markdown and after that it renders out a
+            static pages, so you need to know the basics of writing markdown for that. For more information about
+            writing markdown you can checkout the following markdown cheatsheets:
+        </p>
+    </div>
+    <div class="disqus-comments" id="disqus_thread">
+        <iframe id="dsq-app4079" name="dsq-app4079" allowtransparency="true"
+            frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%"
+            src="https://disqus.com/embed/comments/?base=default&amp;f=belform&amp;t_u=https%3A%2F%2Fvisomglobal.com%2Fdemo%2Fblog%2Fsample-post&amp;t_d=Belform%20Insulation%20%7C%20Sample%20Belform&amp;t_t=Belform%20Insulation%20%7C%20Sample%20Belform&amp;s_o=default#version=6c27b7b2e58aef7c0a19eb6da9bdf7b0"
+            style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"
+            horizontalscrolling="no" verticalscrolling="no">
+        </iframe>
+    </div>
+    <hr class="has-background-black">
+</div>

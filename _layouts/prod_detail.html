@@ -1,0 +1,105 @@
+---
+layout: default
+---
+<style>
+    /* Section Styles */
+    .blog-section {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: large;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .blog-section h1 {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .blog-section h2 {
+        font-size: 1.5em;
+        color: #777;
+        margin-bottom: 20px;
+    }
+
+    .blog-section .short-description {
+        font-size: 1em;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .blog-section p {
+        font-size: 1em;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .blog-section img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .blog-section hr {
+        border: none;
+        height: 2px;
+        background-color: #000;
+        margin: 20px 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .blog-section {
+            padding: 15px;
+        }
+
+        .blog-section h1 {
+            font-size: 2em;
+        }
+
+        .blog-section h2 {
+            font-size: 1.2em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blog-section {
+            padding: 10px;
+        }
+
+        .blog-section h1 {
+            font-size: 1.8em;
+        }
+
+        .blog-section h2 {
+            font-size: 1em;
+        }
+
+        .blog-section .short-description, .blog-section p {
+            font-size: 0.9em;
+        }
+    }
+</style>
+
+<section class="blog-section">
+    <nav>
+        <a href="/">Home</a> / <a href="{{'products'| relative_url}}">Products</a>
+    </nav>
+    <hr>
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+    <div class="short-description">{{ page.short_description_1 }}</div>
+    <div class="short-description">{{ page.short_description_2 }}</div>
+    {% include slideshow.html %}
+    <!-- <img src="{{ page.image_url }}" alt="{{ page.title }}"> -->
+    <p>{{ content }}</p>
+    <hr>
+    <nav>
+        <a href="/">Home</a> / <a href="{{'products'| relative_url}}">Products</a>
+    </nav>
+</section>
