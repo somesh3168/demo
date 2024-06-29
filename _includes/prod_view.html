@@ -1,0 +1,21 @@
+<section>
+    <header class="major">
+        <h2>Belform Insulation Products</h2>
+        <!-- Marquee Component -->
+        <div class="marquee" id="marquee">
+            <div class="marquee-content">
+                {% for product in site.belform_products %}
+                <div class="thumbnail-wrapper">
+                    <a href="{{ product.url }}">
+                        <img src="{{ product.image_url }}" alt="{{ product.title_1 }}">
+                        <div class="caption">{{ product.title_1 }}</div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </header>
+    <ul class="actions">
+        <li><a href="#" class="button big">Learn More</a></li>
+    </ul>
+</section>

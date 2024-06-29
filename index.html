@@ -31,49 +31,11 @@ layout: default
 </section>
 
 
-<section>
-  <header class="major">
-    <h2>Belform Insulation Products</h2>
-    <!-- Marquee Component -->
-    <div class="marquee" id="marquee">
-      <div class="marquee-content">
-        {% for product in site.data.products %}
-        <div class="thumbnail-wrapper">
-          <a href="{{ product.link }}" target="_blank">
-            <img src="{{ product.image_url }}" alt="{{ product.title_1 }}">
-            <div class="caption">{{ product.title_1 }}</div>
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </header>
-  <ul class="actions">
-          <li><a href="#" class="button big">Learn More</a></li>
-      </ul>
-</section>
+{% include prod_view.html %}
 
-<section>
-  <header class="major">
-      <h2>Belform Insulation Projects</h2>
-      <!-- Marquee Component -->
-      <div class="marquee" id="marquee">
-          <div class="marquee-content">
-              {% for project in projects %}
-              <div class="thumbnail-wrapper">
-                  <a href="#" target="_blank">
-                      <img src="#" alt="{{ project.title_1 }}">
-                      <div class="caption" style="text-overflow:ellipsis;">{{ project.title_1 }}</div>
-                  </a>
-              </div>
-              {% endfor %}
-          </div>
-      </div>
-  </header>
-  <ul class="actions">
-      <li><a href="#" class="button big">Learn More</a></li>
-  </ul>
-</section>
+{% include proj_view.html %}
+{% include map.html %}
+
 <script>
   let slideIndex = [1,1];
   let slideId = ["slide_f1", "slide_f2"]

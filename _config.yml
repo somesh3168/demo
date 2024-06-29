@@ -30,8 +30,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 collections:
-  prods:
+  belform_products:
     output: true
+  belform_projects:
+      output: true
 
 
 plugins:
