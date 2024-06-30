@@ -127,7 +127,7 @@
     {% for project in site.belform_projects %}
     <div class="columns has-text-centered" id="blog-card">
         <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
-            <div class="image is-16by9" style="background-image: url({{ project.image_url }});">
+            <div class="image is-16by9" style="background-image: url({{ project.images }});">
             </div>
         </div>
         <a href="{{ project.url }}">
@@ -138,10 +138,9 @@
                         font-family: 'Poppins', sans-serif;">
                         {{ project.content | strip_html | truncatewords:50 }}
                     </cite>
-                    <hr class="has-background-grey"> <span class="has-text-grey">Published on <span
-                            class="has-text-weight-semibold">April 24, 2020</span></span> |
-                    <i class="fas fa-clock"></i> Font Awesome fontawesome.com
-                    <span class="has-text-weight-semibold">3
+                    <hr class="has-background-grey"> <span class="has-text-grey">{{ project.title }}</span> |
+                    <i class="fas fa-clock"></i> Belform Insulation Canada
+                    <span class="has-text-weight-semibold">| 4
                         min</span> read
                 </div>
             </div>

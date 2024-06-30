@@ -7,8 +7,8 @@
                 {% for project in site.belform_projects %}
                 <div class="thumbnail-wrapper">
                     <a href="{{ project.url }}">
-                        <img src="{{ project.image_url }}" alt="{{ project.title_1 }}">
-                        <div class="caption">{{ project.title_1 }}</div>
+                        <img src="{{ project.images }}" alt="{{ project.title }}">
+                        <div class="caption">{{ project.title }}</div>
                     </a>
                 </div>
                 {% endfor %}
@@ -16,6 +16,6 @@
         </div>
     </header>
     <ul class="actions">
-        <li><a href="#" class="button big">Learn More</a></li>
+        <li><a href="{{'projects'| relative_url}}" class="button big">Our Projects</a></li>
     </ul>
 </section>

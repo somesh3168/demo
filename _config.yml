@@ -35,6 +35,10 @@ collections:
   belform_projects:
       output: true
 
+author:
+  name: "Belform Insulation Canada"
+  email: "belforminsulation@gmail.com"
+  url: "https://www.belform.com"
 
 plugins:
   - jekyll-feed

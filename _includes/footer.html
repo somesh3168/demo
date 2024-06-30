@@ -67,6 +67,13 @@
   margin: 0;
 }
 
+.visom-branding {
+  color: #B6E853;
+  background: #181818;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
 @media (max-width: 768px) {
   .footer-column {
     min-width: 100%;
@@ -75,14 +82,14 @@
 }
 
 </style>
-
+{% include callback_modal.html %}
 <div class="blog-footer">
     <div class="footer-container">
         <div class="footer-column">
             <h3>Company</h3>
             <ul>
                 <li><a href="{{'about' | relative_url}}">About Us</a></li>
-                <li><a href="#">Careers</a></li>
+                <li onclick="openModal('callback')"><a href="#">Careers</a></li>
                 <li><a href="{{'products'| relative_url}}">Products</a></li>
                 <li><a href="{{'projects'| relative_url}}">Projects</a></li>
             </ul>
@@ -92,7 +99,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="{{'services'| relative_url}}">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li onclick="openModal('callback')"><a href="#">Contact</a></li>
                 <li><a href="/atom.xml">RSS</a></li>
             </ul>
         </div>
@@ -118,6 +125,6 @@
     </div>
     <div class="footer-bottom">
         <p>&copy; Copyright © 2024, Belform Insulation. All rights reserved.</p>
-        <p>Powered by ViSom Global.</p>
+        <p style="line-height: 0.4;">Powered by <small><a class="visom-branding" href="https://visomglobal.com" target="_blank">ViSom Global</a></small></p>
     </div>
 </div>
